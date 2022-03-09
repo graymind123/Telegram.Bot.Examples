@@ -46,10 +46,11 @@ ngrok http 8443
 ```
 
 Telegram API only supports the ports 443, 80, 88 or 8443. Feel free to change the port in the config of the project.
+To do this, you can go to Properties/launchSettings.json and change port number in iisSettings>iisExpress>applicationUrl. 
 
 ### Set Webhook
 
-From ngrok you get an URL to your local server. It’s important to use the `https` one. You can manually set webhook with  [setWebhook](https://core.telegram.org/bots/api#setwebhook) API call, providing this URL as form-data (key: url, value: `https://yoursubdomain.ngrok.io/api/update`).
+From ngrok you get an URL to your local server. It’s important to use the `https` one. You can manually set webhook with  [setWebhook](https://core.telegram.org/bots/api#setwebhook) API call, providing this URL as form-data (key: url, value: `https://yoursubdomain.ngrok.io/bot/update`).
 
 ### Run Bot
 
